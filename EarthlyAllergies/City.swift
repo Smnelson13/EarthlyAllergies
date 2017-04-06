@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Orlando {
+struct Orlando
+{
   
   static let Latitude: Double = 28.538336
   static let Longitude: Double = -81.379234

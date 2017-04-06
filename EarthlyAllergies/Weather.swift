@@ -7,3 +7,20 @@
 //
 
 import Foundation
+
+
+class Weather
+{
+  let temperature: Double
+  let humidity: Double
+  let apparentTemperature: Double
+ 
+  
+  init(weatherDictionary: [String: Any])
+  {
+    temperature = weatherDictionary["temperature"] as! Double
+    humidity = weatherDictionary["humidity"] as! Double
+    apparentTemperature = weatherDictionary["apparentTemperature"] as! Double
+    
+  }
+}
