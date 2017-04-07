@@ -10,6 +10,10 @@ import UIKit
 class EarthlyViewController: UIViewController, APIControllerProtocol
 {
   @IBOutlet weak var currentTemperatureLabel: UILabel!
+  @IBOutlet weak var humidityLabel: UILabel!
+  @IBOutlet weak var apparentTemperatureLabel: UILabel!
+
+
 
  
     override func viewDidLoad()
@@ -32,6 +36,8 @@ class EarthlyViewController: UIViewController, APIControllerProtocol
     let dispatchQueue = DispatchQueue.main
     dispatchQueue.async {
       self.currentTemperatureLabel.text = "\(currentWeather.temperature)"
+      self.apparentTemperatureLabel.text = "\(currentWeather.apparentTemperature)"
+      self.humidityLabel.text = "\(currentWeather.humidity)"
       
     }
   }
