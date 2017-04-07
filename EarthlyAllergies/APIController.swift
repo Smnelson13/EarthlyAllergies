@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 //struct API
 //{
@@ -34,13 +35,13 @@ class APIController
     self.delegate = delegate
   }
   
-  func searchDarkSky()
+  func searchDarkSky(coordinate: CLLocationCoordinate2D)
   {
 //   APIController.APIKey
 //    let darkSkySearchTerm = searchTerm.replacingOccurrences(of: " ", with: "%20", options: NSString.CompareOptions.caseInsensitive, range: nil)
 //    if darkSkySearchTerm.addingPercentEncoding(withAllowedCharacters: CharacterSet.alphanumerics) != nil
 
-    let url = URL(string: "https://api.darksky.net/forecast/c3d8d4c9641dfcf8bda6a087e1f55f8b/28.538336,-81.379234")!
+    let url = URL(string: "https://api.darksky.net/forecast/c3d8d4c9641dfcf8bda6a087e1f55f8b/\(coordinate.latitude),\(coordinate.longitude)")!
 //      let url = URL(string: urlPath)!
     let session = URLSession.shared
 

@@ -57,6 +57,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNT-2c-1d4" customClass="SKYIconView" customModule="EarthlyAllergies" customModuleProvider="target">
+                                <rect key="frame" x="176.5" y="303" width="50" height="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="00o-ma-9YL"/>
+                                    <constraint firstAttribute="width" constant="50" id="KJt-7w-1iK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -66,10 +74,12 @@
                             <constraint firstItem="rFo-ui-t3v" firstAttribute="leading" secondItem="4TK-kj-JRL" secondAttribute="leading" constant="129" id="5Ih-VQ-chJ"/>
                             <constraint firstItem="h47-oZ-nv5" firstAttribute="top" secondItem="rFo-ui-t3v" secondAttribute="bottom" constant="135" id="8OU-Nj-9zR"/>
                             <constraint firstItem="4pe-nx-vPz" firstAttribute="leading" secondItem="4TK-kj-JRL" secondAttribute="leading" constant="145" id="9IM-tw-JJz"/>
+                            <constraint firstItem="hNT-2c-1d4" firstAttribute="centerX" secondItem="4pe-nx-vPz" secondAttribute="centerX" id="A2P-pd-4px"/>
                             <constraint firstItem="ZTo-mY-J32" firstAttribute="centerX" secondItem="4TK-kj-JRL" secondAttribute="centerX" id="EHO-jH-2Kz"/>
                             <constraint firstItem="i21-oB-0Qp" firstAttribute="leading" secondItem="4TK-kj-JRL" secondAttribute="leading" constant="166" id="Igs-Sb-96R"/>
                             <constraint firstItem="rFo-ui-t3v" firstAttribute="top" secondItem="i21-oB-0Qp" secondAttribute="bottom" constant="8" id="NkJ-sT-tAx"/>
                             <constraint firstItem="rFo-ui-t3v" firstAttribute="centerX" secondItem="i21-oB-0Qp" secondAttribute="centerX" id="NrQ-w7-FKg"/>
+                            <constraint firstItem="hNT-2c-1d4" firstAttribute="top" secondItem="4pe-nx-vPz" secondAttribute="bottom" constant="40" id="OsX-zy-3lz"/>
                             <constraint firstAttribute="trailing" secondItem="rFo-ui-t3v" secondAttribute="trailing" constant="104" id="QRl-x3-k56"/>
                             <constraint firstItem="pKi-pl-nvP" firstAttribute="top" secondItem="ZTo-mY-J32" secondAttribute="bottom" constant="8" id="UcI-wG-5HM"/>
                             <constraint firstAttribute="trailing" secondItem="4pe-nx-vPz" secondAttribute="trailing" constant="117" id="Vbv-4B-i8B"/>
@@ -86,11 +96,12 @@
                         <outlet property="apparentTemperatureLabel" destination="4pe-nx-vPz" id="c6y-S7-JaY"/>
                         <outlet property="currentTemperatureLabel" destination="pKi-pl-nvP" id="PX9-P8-6Cn"/>
                         <outlet property="humidityLabel" destination="rFo-ui-t3v" id="nfU-N0-TI0"/>
+                        <outlet property="skyconImage" destination="hNT-2c-1d4" id="Kw3-cC-hDf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzQ-M4-IfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4335" y="-184"/>
+            <point key="canvasLocation" x="-4673" y="-235"/>
         </scene>
     </scenes>
 </document>

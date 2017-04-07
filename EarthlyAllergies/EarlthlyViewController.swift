@@ -6,29 +6,30 @@
 //  Copyright © 2017 The Iron Yard. All rights reserved.
 //
 import UIKit
+import CoreLocation
 
-class EarthlyViewController: UIViewController, APIControllerProtocol
+class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocationManagerDelegate
 {
+  let locationManager = CLLocationManager()
+
   @IBOutlet weak var currentTemperatureLabel: UILabel!
   @IBOutlet weak var humidityLabel: UILabel!
   @IBOutlet weak var apparentTemperatureLabel: UILabel!
-
-
-
- 
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-      let apiController = APIController(delegate: self)
-      apiController.searchDarkSky()
-   //   CurrentTemperatureLabel.text = Weather.
-   
-    }
-      override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  @IBOutlet weak var skyconImage: SKYIconView!
+  
+  override func viewDidLoad()
+  {
+    super.viewDidLoad()
+    skyconImage.setColor = UIColor.black
+    skyconImage.backgroundColor = UIColor.white
+    skyconImage.setType = .clearDay
+    loadCurrentLocation()
+  }
+  
+  override func didReceiveMemoryWarning()
+  {
+    super.didReceiveMemoryWarning()
+  }
     
   func didRecieve(_ results: [String: Any])
   {
@@ -38,23 +39,44 @@ class EarthlyViewController: UIViewController, APIControllerProtocol
       self.currentTemperatureLabel.text = "\(currentWeather.temperature)"
       self.apparentTemperatureLabel.text = "\(currentWeather.apparentTemperature)"
       self.humidityLabel.text = "\(currentWeather.humidity)"
-      
     }
   }
   
+  func loadCurrentLocation()
+  {
+    configureLocationManager()
+  }
   
-  
-  
-  
-  
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+  func configureLocationManager()
+  {
+    if CLLocationManager.authorizationStatus() != CLAuthorizationStatus.denied && CLLocationManager.authorizationStatus() != CLAuthorizationStatus.restricted
+    {
+      locationManager.delegate = self
+      locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+      if CLLocationManager.authorizationStatus() == CLAuthorizationStatus.notDetermined
+      {
+        locationManager.requestWhenInUseAuthorization()
+      }
     }
-    */
+  }
+  
+  func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus)
+  {
+    if status == CLAuthorizationStatus.authorizedWhenInUse
+    {
+      locationManager.startUpdatingLocation()
+    }
+  }
+  
+  func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+  {
+    locationManager.stopUpdatingLocation()
+    if let location = locations.last
+    {
+      let apiController = APIController(delegate: self)
+      apiController.searchDarkSky(coordinate: location.coordinate)
+
+    }
+  }
 
 }

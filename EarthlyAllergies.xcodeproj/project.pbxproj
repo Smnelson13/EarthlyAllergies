@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90206C5B1E97D34000E2F0E7 /* SKYIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90206C5A1E97D34000E2F0E7 /* SKYIconView.swift */; };
 		9089B5631E958058007398CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B5621E958058007398CA /* AppDelegate.swift */; };
 		9089B5681E958058007398CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9089B5661E958058007398CA /* Main.storyboard */; };
 		9089B56A1E958058007398CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9089B5691E958058007398CA /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		90206C5A1E97D34000E2F0E7 /* SKYIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKYIconView.swift; sourceTree = "<group>"; };
 		9089B55F1E958058007398CA /* EarthlyAllergies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthlyAllergies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9089B5621E958058007398CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9089B5671E958058007398CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				9089B5621E958058007398CA /* AppDelegate.swift */,
 				9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */,
 				9089B5741E95807B007398CA /* APIController.swift */,
+				90206C5A1E97D34000E2F0E7 /* SKYIconView.swift */,
 				9089B5761E9580A7007398CA /* City.swift */,
 				9089B5781E9580B6007398CA /* Weather.swift */,
 				9089B5661E958058007398CA /* Main.storyboard */,
@@ -108,6 +111,7 @@
 				TargetAttributes = {
 					9089B55E1E958058007398CA = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 5CZ45M6538;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -149,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9089B57B1E95AF9A007398CA /* File.swift in Sources */,
+				90206C5B1E97D34000E2F0E7 /* SKYIconView.swift in Sources */,
 				9089B57F1E95B05C007398CA /* EarlthlyViewController.swift in Sources */,
 				9089B5631E958058007398CA /* AppDelegate.swift in Sources */,
 				9089B5771E9580A7007398CA /* City.swift in Sources */,
@@ -276,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5CZ45M6538;
 				INFOPLIST_FILE = EarthlyAllergies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.EarthlyAllergies;
@@ -288,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5CZ45M6538;
 				INFOPLIST_FILE = EarthlyAllergies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.EarthlyAllergies;
