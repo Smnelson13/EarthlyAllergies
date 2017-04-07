@@ -16,13 +16,16 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
   @IBOutlet weak var humidityLabel: UILabel!
   @IBOutlet weak var apparentTemperatureLabel: UILabel!
   @IBOutlet weak var skyconImage: SKYIconView!
+  @IBOutlet weak var summaryLabel: UILabel!
+  @IBOutlet weak var visibilityLabel: UILabel!
+  @IBOutlet weak var windSpeedLabel: UILabel!
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
     skyconImage.setColor = UIColor.black
     skyconImage.backgroundColor = UIColor.white
-    skyconImage.setType = .clearDay
+    //skyconImage.setType = Skycons(rawValue: "clear-day")!
     loadCurrentLocation()
   }
   
@@ -36,9 +39,13 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
     let currentWeather =  Weather(weatherDictionary: results)
     let dispatchQueue = DispatchQueue.main
     dispatchQueue.async {
-      self.currentTemperatureLabel.text = "\(currentWeather.temperature)"
-      self.apparentTemperatureLabel.text = "\(currentWeather.apparentTemperature)"
-      self.humidityLabel.text = "\(currentWeather.humidity)"
+      self.currentTemperatureLabel.text = "\(currentWeather.temperature)℉"
+      self.apparentTemperatureLabel.text = "\(currentWeather.apparentTemperature)℉"
+      self.humidityLabel.text = "\(currentWeather.humidity)%"
+      self.skyconImage.setType = Skycons(rawValue: currentWeather.icon)!
+      self.summaryLabel.text = "\(currentWeather.summary)"
+      self.windSpeedLabel.text = "\(currentWeather.windSpeed)MPH"
+      self.visibilityLabel.text = "\(currentWeather.visibility)Mi"
     }
   }
   

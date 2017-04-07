@@ -15,6 +15,9 @@ class Weather
   let humidity: Double
   let apparentTemperature: Double
   let icon: String
+  let summary: String
+  let windSpeed: Double
+  let visibility: Double
   
   init(weatherDictionary: [String: Any])
   {
@@ -22,5 +25,8 @@ class Weather
     humidity = weatherDictionary["humidity"] as! Double
     apparentTemperature = weatherDictionary["apparentTemperature"] as! Double
     icon = weatherDictionary["icon"] as! String
+    summary = weatherDictionary["summary"] as! String
+    windSpeed = weatherDictionary["windSpeed"] as! Double
+    visibility = weatherDictionary["visibility"] as! Double
   }
 }

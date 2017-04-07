@@ -11,7 +11,7 @@ import UIKit
 
 enum Skycons: String
 {
-    case clearDay = "clear-day"
+  case clearDay = "clear-day"
   case clearNight = "clear-night"
   case rain = "rain"
   case sleet = "sleet"
