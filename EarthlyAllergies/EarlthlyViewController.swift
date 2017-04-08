@@ -23,8 +23,8 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    skyconImage.setColor = UIColor.black
-    skyconImage.backgroundColor = UIColor.white
+    skyconImage.setColor = UIColor.white
+    skyconImage.backgroundColor = UIColor.clear
     //skyconImage.setType = Skycons(rawValue: "clear-day")!
     loadCurrentLocation()
   }
