@@ -172,10 +172,10 @@
                         <outlet property="summaryLabel" destination="us0-Oc-McF" id="THP-cM-fa4"/>
                         <outlet property="visibilityLabel" destination="Rux-od-EyP" id="q9z-tj-sfD"/>
                         <outlet property="windSpeedLabel" destination="UsO-c3-4ht" id="ueU-mu-RnI"/>
-                        <outletCollection property="accessoryLabels" destination="i21-oB-0Qp" id="Kq2-yq-32g"/>
-                        <outletCollection property="accessoryLabels" destination="h47-oZ-nv5" id="z8m-23-B66"/>
-                        <outletCollection property="accessoryLabels" destination="xoA-PT-Rod" id="LBd-Wp-hcF"/>
-                        <outletCollection property="accessoryLabels" destination="KpB-kj-jS8" id="CU6-Qv-nsv"/>
+                        <outletCollection property="accessoryLabels" destination="i21-oB-0Qp" collectionClass="NSMutableArray" id="Kq2-yq-32g"/>
+                        <outletCollection property="accessoryLabels" destination="h47-oZ-nv5" collectionClass="NSMutableArray" id="z8m-23-B66"/>
+                        <outletCollection property="accessoryLabels" destination="xoA-PT-Rod" collectionClass="NSMutableArray" id="LBd-Wp-hcF"/>
+                        <outletCollection property="accessoryLabels" destination="KpB-kj-jS8" collectionClass="NSMutableArray" id="CU6-Qv-nsv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzQ-M4-IfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -196,20 +196,26 @@
                         <subviews>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-GQ-RrG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Lf-eX-zWN">
-                                <rect key="frame" x="209" y="72" width="48" height="30"/>
+                                <rect key="frame" x="186" y="91" width="100" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-Vo-1hQ">
-                                <rect key="frame" x="120" y="72" width="47" height="30"/>
+                                <rect key="frame" x="85" y="91" width="100" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="search">
+                                <color key="backgroundColor" red="0.0" green="0.50309728770335571" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -229,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4f-as-chQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6825" y="-280"/>
+            <point key="canvasLocation" x="-6826.3999999999996" y="-280.20989505247377"/>
         </scene>
     </scenes>
 </document>
