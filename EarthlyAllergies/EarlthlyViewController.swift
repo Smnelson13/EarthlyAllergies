@@ -11,6 +11,9 @@ import CoreLocation
 class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocationManagerDelegate
 {
   let locationManager = CLLocationManager()
+  var apiController: APIController!
+  
+  @IBOutlet var accessoryLabels: [UILabel]!
 
   @IBOutlet weak var currentTemperatureLabel: UILabel!
   @IBOutlet weak var humidityLabel: UILabel!
@@ -19,17 +22,66 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
   @IBOutlet weak var summaryLabel: UILabel!
   @IBOutlet weak var visibilityLabel: UILabel!
   @IBOutlet weak var windSpeedLabel: UILabel!
+  @IBOutlet weak var searchButton: UIButton!
 
   
   override func viewDidLoad()
   {
     super.viewDidLoad()
+    apiController = APIController(delegate: self)
     skyconImage.setColor = UIColor.white
     skyconImage.backgroundColor = UIColor.clear
+    
+    searchButton.setImage(UIImage(named: "search.png"), for: .normal)
+    searchButton.tintColor = view.backgroundColor
+    searchButton.imageView?.tintColor = view.backgroundColor
+    searchButton.layer.cornerRadius = searchButton.frame.width / 2
+    searchButton.layer.masksToBounds = true
+    searchButton.clipsToBounds = true
+    searchButton.layer.shadowOpacity = 0.25
+    searchButton.layer.shadowColor = UIColor.darkGray.cgColor
+    searchButton.alpha = 0
+    
+    let labels = [
+      currentTemperatureLabel,
+      humidityLabel,
+      apparentTemperatureLabel,
+      summaryLabel,
+      visibilityLabel,
+      windSpeedLabel
+    ] + accessoryLabels
+    
+    for label in labels
+    {
+      label.font = UIFont(name: "Avenir-Light", size: label.font.pointSize)
+    }
+    
     //skyconImage.setType = Skycons(rawValue: "clear-day")!
     loadCurrentLocation()
   }
   
+  override func viewDidAppear(_ animated: Bool)
+  {
+    super.viewDidAppear(animated)
+    
+    let frame = searchButton.frame
+    
+    searchButton.frame.origin.x += 200
+    searchButton.alpha = 0
+    
+    UIView.animate(withDuration: 0.5, animations: { 
+      self.searchButton.alpha = 1
+      self.searchButton.frame = frame
+    }, completion: { finished in
+      UIView.animate(withDuration: 0.25, animations: { 
+        self.searchButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+      }, completion: { finished in
+        UIView.animate(withDuration: 0.125, animations: { 
+          self.searchButton.transform = .identity
+        })
+      })
+    })
+  }
   override func didReceiveMemoryWarning()
   {
     super.didReceiveMemoryWarning()
@@ -81,10 +133,25 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
     locationManager.stopUpdatingLocation()
     if let location = locations.last
     {
-      let apiController = APIController(delegate: self)
       apiController.searchDarkSky(coordinate: location.coordinate)
-
     }
   }
+}
 
+extension EarthlyViewController: ZipcodeViewControllerDelegate
+{
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+  {
+    if let zipcodeViewController = segue.destination as? ZipcodeViewController
+    {
+      zipcodeViewController.delegate = self
+    }
+  }
+  
+  func zipcodeViewControllerDidReceiveLocationCoordinate(coordinate: CLLocationCoordinate2D)
+  {
+    dismiss(animated: true) { 
+      self.apiController.searchDarkSky(coordinate: coordinate)
+    }
+  }
 }

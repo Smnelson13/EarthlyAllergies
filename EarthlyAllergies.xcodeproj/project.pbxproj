@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		90206C5B1E97D34000E2F0E7 /* SKYIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90206C5A1E97D34000E2F0E7 /* SKYIconView.swift */; };
-		9058BDE41E99A638001815CE /* ZipcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9058BDE31E99A638001815CE /* ZipcodeViewController.swift */; };
+		9058BDEE1E9A9015001815CE /* ZipcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9058BDED1E9A9015001815CE /* ZipcodeViewController.swift */; };
+		9058BDF01E9ADA9E001815CE /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 9058BDEF1E9ADA9E001815CE /* search.png */; };
 		9089B5631E958058007398CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B5621E958058007398CA /* AppDelegate.swift */; };
 		9089B5681E958058007398CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9089B5661E958058007398CA /* Main.storyboard */; };
 		9089B56A1E958058007398CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9089B5691E958058007398CA /* Assets.xcassets */; };
 		9089B56D1E958058007398CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9089B56B1E958058007398CA /* LaunchScreen.storyboard */; };
 		9089B5751E95807B007398CA /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B5741E95807B007398CA /* APIController.swift */; };
-		9089B5771E9580A7007398CA /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B5761E9580A7007398CA /* City.swift */; };
 		9089B5791E9580B6007398CA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B5781E9580B6007398CA /* Weather.swift */; };
 		9089B57B1E95AF9A007398CA /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B57A1E95AF9A007398CA /* File.swift */; };
 		9089B57F1E95B05C007398CA /* EarlthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */; };
@@ -22,7 +22,8 @@
 
 /* Begin PBXFileReference section */
 		90206C5A1E97D34000E2F0E7 /* SKYIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKYIconView.swift; sourceTree = "<group>"; };
-		9058BDE31E99A638001815CE /* ZipcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipcodeViewController.swift; sourceTree = "<group>"; };
+		9058BDED1E9A9015001815CE /* ZipcodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipcodeViewController.swift; sourceTree = "<group>"; };
+		9058BDEF1E9ADA9E001815CE /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		9089B55F1E958058007398CA /* EarthlyAllergies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EarthlyAllergies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9089B5621E958058007398CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9089B5671E958058007398CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		9089B56C1E958058007398CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9089B56E1E958058007398CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9089B5741E95807B007398CA /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
-		9089B5761E9580A7007398CA /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		9089B5781E9580B6007398CA /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9089B57A1E95AF9A007398CA /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlthlyViewController.swift; sourceTree = "<group>"; };
@@ -69,13 +69,13 @@
 			children = (
 				9089B5621E958058007398CA /* AppDelegate.swift */,
 				9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */,
+				9058BDED1E9A9015001815CE /* ZipcodeViewController.swift */,
 				9089B5741E95807B007398CA /* APIController.swift */,
 				90206C5A1E97D34000E2F0E7 /* SKYIconView.swift */,
-				9058BDE31E99A638001815CE /* ZipcodeViewController.swift */,
-				9089B5761E9580A7007398CA /* City.swift */,
 				9089B5781E9580B6007398CA /* Weather.swift */,
 				9089B5661E958058007398CA /* Main.storyboard */,
 				9089B5691E958058007398CA /* Assets.xcassets */,
+				9058BDEF1E9ADA9E001815CE /* search.png */,
 				9089B56B1E958058007398CA /* LaunchScreen.storyboard */,
 				9089B56E1E958058007398CA /* Info.plist */,
 			);
@@ -145,6 +145,7 @@
 				9089B56D1E958058007398CA /* LaunchScreen.storyboard in Resources */,
 				9089B56A1E958058007398CA /* Assets.xcassets in Resources */,
 				9089B5681E958058007398CA /* Main.storyboard in Resources */,
+				9058BDF01E9ADA9E001815CE /* search.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,9 +159,8 @@
 				9089B57B1E95AF9A007398CA /* File.swift in Sources */,
 				90206C5B1E97D34000E2F0E7 /* SKYIconView.swift in Sources */,
 				9089B57F1E95B05C007398CA /* EarlthlyViewController.swift in Sources */,
-				9058BDE41E99A638001815CE /* ZipcodeViewController.swift in Sources */,
+				9058BDEE1E9A9015001815CE /* ZipcodeViewController.swift in Sources */,
 				9089B5631E958058007398CA /* AppDelegate.swift in Sources */,
-				9089B5771E9580A7007398CA /* City.swift in Sources */,
 				9089B5751E95807B007398CA /* APIController.swift in Sources */,
 				9089B5791E9580B6007398CA /* Weather.swift in Sources */,
 			);
