@@ -19,6 +19,7 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
   @IBOutlet weak var summaryLabel: UILabel!
   @IBOutlet weak var visibilityLabel: UILabel!
   @IBOutlet weak var windSpeedLabel: UILabel!
+
   
   override func viewDidLoad()
   {
