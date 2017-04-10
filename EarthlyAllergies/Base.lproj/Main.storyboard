@@ -194,14 +194,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Zipcode or City" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-GQ-RrG">
+                            <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" placeholder="Zipcode or City" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-GQ-RrG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-Vo-1hQ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-Vo-1hQ">
                                 <rect key="frame" x="112" y="82" width="150" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
@@ -212,18 +212,26 @@
                                     <action selector="cancelTappedWithSender:" destination="xzZ-hK-pWM" eventType="touchUpInside" id="AMO-Zk-iDk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="poweredby-oneline.png" translatesAutoresizingMaskIntoConstraints="NO" id="z3V-iv-S5b">
+                                <rect key="frame" x="0.0" y="573" width="375" height="94"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="z3V-iv-S5b" firstAttribute="top" secondItem="y8Q-Vo-1hQ" secondAttribute="bottom" constant="444" id="4Qj-A4-YXr"/>
                             <constraint firstItem="y8Q-Vo-1hQ" firstAttribute="leading" secondItem="aym-2y-17u" secondAttribute="leading" constant="112" id="A5I-0W-yhf"/>
                             <constraint firstAttribute="trailing" secondItem="y8Q-Vo-1hQ" secondAttribute="trailing" constant="113" id="CVb-u8-HbR"/>
+                            <constraint firstItem="HhM-EF-cml" firstAttribute="top" secondItem="z3V-iv-S5b" secondAttribute="bottom" id="KpT-zI-cbX"/>
                             <constraint firstItem="y8Q-Vo-1hQ" firstAttribute="top" secondItem="G1d-GQ-RrG" secondAttribute="bottom" constant="18" id="a6a-qc-elH"/>
                             <constraint firstAttribute="trailing" secondItem="G1d-GQ-RrG" secondAttribute="trailing" id="aZl-BE-jiR"/>
+                            <constraint firstAttribute="trailing" secondItem="z3V-iv-S5b" secondAttribute="trailing" id="bPd-ce-8ma"/>
+                            <constraint firstItem="z3V-iv-S5b" firstAttribute="leading" secondItem="aym-2y-17u" secondAttribute="leading" id="fOq-zK-JrE"/>
                             <constraint firstItem="G1d-GQ-RrG" firstAttribute="leading" secondItem="aym-2y-17u" secondAttribute="leading" id="nOU-04-ipZ"/>
                             <constraint firstItem="G1d-GQ-RrG" firstAttribute="top" secondItem="ukm-8S-Cws" secondAttribute="bottom" id="s60-OE-5bf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="poweredByImage" destination="z3V-iv-S5b" id="LPx-3y-SUw"/>
                         <outlet property="searchBar" destination="G1d-GQ-RrG" id="xfw-gH-t3O"/>
                         <outlet property="searchButton" destination="y8Q-Vo-1hQ" id="baK-eF-5gO"/>
                     </connections>
@@ -233,4 +241,7 @@
             <point key="canvasLocation" x="-6826.3999999999996" y="-280.20989505247377"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="poweredby-oneline.png" width="3350" height="759"/>
+    </resources>
 </document>

@@ -22,13 +22,17 @@ class ZipcodeViewController: UIViewController, UISearchBarDelegate
   @IBOutlet weak var searchButton: UIButton!
   var delegate: ZipcodeViewControllerDelegate!
   
+  @IBOutlet weak var poweredByImage: UIImageView!
   override func viewDidLoad()
   {
     super.viewDidLoad()
     searchBar.delegate = self
     searchBar.showsCancelButton = true
     searchBar.delegate = self
-
+    poweredByImage.image = poweredByImage.image!.withRenderingMode(.alwaysTemplate)
+    poweredByImage.tintColor = UIColor.white
+    
+    searchButton.layer.cornerRadius = 8.0
   }
   
   func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
