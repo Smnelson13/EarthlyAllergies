@@ -69,14 +69,19 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
     searchButton.frame.origin.x += 200
     searchButton.alpha = 0
     
-    UIView.animate(withDuration: 0.5, animations: { 
+    UIView.animate(withDuration: 0.5, animations:
+    {
       self.searchButton.alpha = 1
       self.searchButton.frame = frame
-    }, completion: { finished in
-      UIView.animate(withDuration: 0.25, animations: { 
+    }, completion:
+      { finished in
+      UIView.animate(withDuration: 0.25, animations:
+      {
         self.searchButton.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-      }, completion: { finished in
-        UIView.animate(withDuration: 0.125, animations: { 
+      }, completion:
+      { finished in
+        UIView.animate(withDuration: 0.125, animations:
+      {
           self.searchButton.transform = .identity
         })
       })

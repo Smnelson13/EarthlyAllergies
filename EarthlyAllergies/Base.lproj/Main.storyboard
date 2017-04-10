@@ -194,28 +194,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-GQ-RrG">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Zipcode or City" translatesAutoresizingMaskIntoConstraints="NO" id="G1d-GQ-RrG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-Vo-1hQ">
-                                <rect key="frame" x="112" y="96" width="150" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8Q-Vo-1hQ">
+                                <rect key="frame" x="112" y="82" width="150" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7Il-Ye-uq5" kind="presentation" id="9M1-W0-eWc"/>
+                                    <action selector="cancelTappedWithSender:" destination="xzZ-hK-pWM" eventType="touchUpInside" id="AMO-Zk-iDk"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.034000725760000003" green="0.82371963979999996" blue="1" alpha="0.83746254279999999" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="y8Q-Vo-1hQ" firstAttribute="leading" secondItem="aym-2y-17u" secondAttribute="leading" constant="112" id="A5I-0W-yhf"/>
+                            <constraint firstAttribute="trailing" secondItem="y8Q-Vo-1hQ" secondAttribute="trailing" constant="113" id="CVb-u8-HbR"/>
+                            <constraint firstItem="y8Q-Vo-1hQ" firstAttribute="top" secondItem="G1d-GQ-RrG" secondAttribute="bottom" constant="18" id="a6a-qc-elH"/>
                             <constraint firstAttribute="trailing" secondItem="G1d-GQ-RrG" secondAttribute="trailing" id="aZl-BE-jiR"/>
                             <constraint firstItem="G1d-GQ-RrG" firstAttribute="leading" secondItem="aym-2y-17u" secondAttribute="leading" id="nOU-04-ipZ"/>
                             <constraint firstItem="G1d-GQ-RrG" firstAttribute="top" secondItem="ukm-8S-Cws" secondAttribute="bottom" id="s60-OE-5bf"/>

@@ -22,32 +22,12 @@ class ZipcodeViewController: UIViewController, UISearchBarDelegate
   @IBOutlet weak var searchButton: UIButton!
   var delegate: ZipcodeViewControllerDelegate!
   
-  @IBOutlet weak var earthImage: UIImageView!
-  
-  
-  /*
-  init(delegate: APIControllerProtocol)
-  {
-    self.delegate = delegate as! GeocoderAPIProtocol
-  }
-  
-  required init?(coder aDecoder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
-   */
- 
   override func viewDidLoad()
   {
     super.viewDidLoad()
     searchBar.delegate = self
-    // todo: change searchbar text color
-    
     searchBar.showsCancelButton = true
     searchBar.delegate = self
-//    earthImage.setImage(UIImage(named: "#imageLiteral(resourceName: "earth-3.png")"), for: .normal)
-//    earthImage.tintColor = view.backgroundColor
-//    earthImage.imageView?.tintColor = view.backgroundColor
-    
 
   }
   
@@ -64,13 +44,11 @@ class ZipcodeViewController: UIViewController, UISearchBarDelegate
     // Remove focus from the search bar.
     searchBar.endEditing(true)
     
-    // Perform any necessary work.  E.g., repopulating a table view
-    // if the search bar performs filtering.
   }
   override func didReceiveMemoryWarning()
   {
       super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
+  
   }
 
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)
@@ -91,13 +69,19 @@ class ZipcodeViewController: UIViewController, UISearchBarDelegate
     }
     
     let geocoder = CLGeocoder()
-    geocoder.geocodeAddressString(text) { placemarks, error in
-      if let coordinate = placemarks?.first?.location?.coordinate {
+    geocoder.geocodeAddressString(text)
+    { placemarks, error in
+      if let coordinate = placemarks?.first?.location?.coordinate
+      {
         self.delegate.zipcodeViewControllerDidReceiveLocationCoordinate(coordinate: coordinate)
       }
     }
   }
  
+  @IBAction func cancelTapped(sender: UIButton)
+  {
+    dismiss(animated: true, completion: nil)
+  }
 //  func geocoderAPI()
 //  {
 //  
