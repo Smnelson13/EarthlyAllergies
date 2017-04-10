@@ -22,6 +22,7 @@ class ZipcodeViewController: UIViewController, UISearchBarDelegate
   @IBOutlet weak var searchButton: UIButton!
   var delegate: ZipcodeViewControllerDelegate!
   
+  @IBOutlet weak var earthImage: UIImageView!
   
   
   /*
@@ -40,8 +41,32 @@ class ZipcodeViewController: UIViewController, UISearchBarDelegate
     super.viewDidLoad()
     searchBar.delegate = self
     // todo: change searchbar text color
-  }
+    
+    searchBar.showsCancelButton = true
+    searchBar.delegate = self
+//    earthImage.setImage(UIImage(named: "#imageLiteral(resourceName: "earth-3.png")"), for: .normal)
+//    earthImage.tintColor = view.backgroundColor
+//    earthImage.imageView?.tintColor = view.backgroundColor
+    
 
+  }
+  
+  func searchBarTextDidBeginEditing(_ searchBar: UISearchBar)
+  {
+    searchBar.showsCancelButton = true
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar)
+  {
+    searchBar.text = nil
+    searchBar.showsCancelButton = false
+    
+    // Remove focus from the search bar.
+    searchBar.endEditing(true)
+    
+    // Perform any necessary work.  E.g., repopulating a table view
+    // if the search bar performs filtering.
+  }
   override func didReceiveMemoryWarning()
   {
       super.didReceiveMemoryWarning()
