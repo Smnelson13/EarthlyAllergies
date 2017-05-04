@@ -17,7 +17,6 @@ protocol APIControllerProtocol
 
 class APIController
 {
-  private static let APIKey = "c3d8d4c9641dfcf8bda6a087e1f55f8b"
   var delegate: APIControllerProtocol?
   
   init(delegate: APIControllerProtocol)
@@ -28,7 +27,7 @@ class APIController
   func searchDarkSky(coordinate: CLLocationCoordinate2D)
   {
     UIApplication.shared.isNetworkActivityIndicatorVisible = true
-    let url = URL(string: "https://api.darksky.net/forecast/c3d8d4c9641dfcf8bda6a087e1f55f8b/\(coordinate.latitude),\(coordinate.longitude)")!
+    let url = URL(string: "https://api.darksky.net/forecast/\(DarkSkyAPIKey)/\(coordinate.latitude),\(coordinate.longitude)")!
     let session = URLSession.shared
 
     let task = session.dataTask(with: url, completionHandler: { data, response, error -> Void in
