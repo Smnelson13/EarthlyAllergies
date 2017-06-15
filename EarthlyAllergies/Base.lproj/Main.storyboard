@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Il-Ye-uq5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="7Il-Ye-uq5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -80,7 +80,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 MPH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsO-c3-4ht">
-                                <rect key="frame" x="238" y="573" width="61.5" height="24"/>
+                                <rect key="frame" x="238" y="557" width="61.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 MI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rux-od-EyP">
-                                <rect key="frame" x="87.5" y="573.5" width="40" height="24"/>
+                                <rect key="frame" x="87.5" y="557" width="40" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -132,7 +132,7 @@
                             <constraint firstItem="UsO-c3-4ht" firstAttribute="centerX" secondItem="KpB-kj-jS8" secondAttribute="centerX" id="HqA-Yf-Wfd"/>
                             <constraint firstItem="4pe-nx-vPz" firstAttribute="centerX" secondItem="h47-oZ-nv5" secondAttribute="centerX" id="Io1-8d-Llw"/>
                             <constraint firstItem="KpB-kj-jS8" firstAttribute="top" secondItem="4pe-nx-vPz" secondAttribute="bottom" constant="40" id="KH4-6N-H1N"/>
-                            <constraint firstItem="UsO-c3-4ht" firstAttribute="top" secondItem="KpB-kj-jS8" secondAttribute="bottom" constant="26" id="KtV-5V-7vJ"/>
+                            <constraint firstItem="UsO-c3-4ht" firstAttribute="top" secondItem="KpB-kj-jS8" secondAttribute="bottom" constant="10" id="KtV-5V-7vJ"/>
                             <constraint firstItem="us0-Oc-McF" firstAttribute="leading" secondItem="4TK-kj-JRL" secondAttribute="leading" id="Q9N-aH-56a"/>
                             <constraint firstItem="hNT-2c-1d4" firstAttribute="width" secondItem="4TK-kj-JRL" secondAttribute="width" multiplier="0.6" id="T3r-yk-kgf"/>
                             <constraint firstItem="Nfv-of-wxI" firstAttribute="centerX" secondItem="ZTo-mY-J32" secondAttribute="centerX" id="TSk-TR-NlR"/>
@@ -140,7 +140,7 @@
                             <constraint firstItem="KpB-kj-jS8" firstAttribute="centerX" secondItem="4pe-nx-vPz" secondAttribute="centerX" id="VWw-GB-p4h"/>
                             <constraint firstItem="rFo-ui-t3v" firstAttribute="centerX" secondItem="i21-oB-0Qp" secondAttribute="centerX" id="Y1l-ol-oVb"/>
                             <constraint firstItem="hNT-2c-1d4" firstAttribute="centerX" secondItem="us0-Oc-McF" secondAttribute="centerX" id="ZbN-ww-Klv"/>
-                            <constraint firstItem="Rux-od-EyP" firstAttribute="top" secondItem="xoA-PT-Rod" secondAttribute="bottom" constant="26.5" id="alC-i6-mkJ"/>
+                            <constraint firstItem="Rux-od-EyP" firstAttribute="top" secondItem="xoA-PT-Rod" secondAttribute="bottom" constant="10" id="alC-i6-mkJ"/>
                             <constraint firstItem="xoA-PT-Rod" firstAttribute="top" secondItem="rFo-ui-t3v" secondAttribute="bottom" constant="40" id="kO1-xL-0zF"/>
                             <constraint firstItem="ZTo-mY-J32" firstAttribute="top" secondItem="pKi-pl-nvP" secondAttribute="bottom" constant="10" id="kaP-m9-qZk"/>
                             <constraint firstItem="h47-oZ-nv5" firstAttribute="leading" secondItem="Nfv-of-wxI" secondAttribute="trailing" constant="30" id="mKL-ZC-9hr"/>

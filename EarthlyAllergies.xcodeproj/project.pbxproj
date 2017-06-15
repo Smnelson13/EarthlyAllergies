@@ -36,6 +36,7 @@
 		9089B5741E95807B007398CA /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		9089B5781E9580B6007398CA /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlthlyViewController.swift; sourceTree = "<group>"; };
+		90E528741EEE4CEF0024306B /* EarthlyAllergies-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EarthlyAllergies-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 				9058BDEF1E9ADA9E001815CE /* search.png */,
 				9089B56B1E958058007398CA /* LaunchScreen.storyboard */,
 				9089B56E1E958058007398CA /* Info.plist */,
+				90E528741EEE4CEF0024306B /* EarthlyAllergies-Bridging-Header.h */,
 			);
 			path = EarthlyAllergies;
 			sourceTree = "<group>";
@@ -118,6 +120,7 @@
 					9089B55E1E958058007398CA = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 5CZ45M6538;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -289,11 +292,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5CZ45M6538;
 				INFOPLIST_FILE = EarthlyAllergies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.EarthlyAllergies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EarthlyAllergies/EarthlyAllergies-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -302,11 +308,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 5CZ45M6538;
 				INFOPLIST_FILE = EarthlyAllergies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.EarthlyAllergies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EarthlyAllergies/EarthlyAllergies-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
