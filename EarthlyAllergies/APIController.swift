@@ -13,6 +13,7 @@ import UIKit
 protocol APIControllerProtocol
 {
   func didRecieve(_ results: [String: Any])
+  func didRecieveDaily(_ dailyResults: [String: Any])
 }
 
 class APIController
@@ -52,6 +53,36 @@ class APIController
     
     task.resume()
   }
+  
+  func searchDarkSkyForDaily(coordinate: CLLocationCoordinate2D)
+  {
+    UIApplication.shared.isNetworkActivityIndicatorVisible = true
+    let url = URL(string: "https://api.darksky.net/forecast/\(DarkSkyAPIKey)/\(coordinate.latitude),\(coordinate.longitude)")!
+    let session = URLSession.shared
+    
+    let task = session.dataTask(with: url, completionHandler: { data, response, error -> Void in
+      
+      print("Task completed")
+      if let error = error
+      {
+        print(error.localizedDescription)
+      }
+      else
+      {
+        if let dailyDictionary = self.parseJSON(data!)
+        {
+          if let dailyResults = dailyDictionary["daily"] as? [String: Any]
+          {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            self.delegate?.didRecieveDaily(dailyResults)
+          }
+        }
+      }
+    })
+    
+    task.resume()
+  }
+
   
   
   func parseJSON(_ data: Data) -> [String: Any]?

@@ -107,6 +107,11 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
     }
   }
   
+  func didRecieveDaily(_ dailyResults: [String : Any])
+  {
+    //some code
+  }
+  
   func loadCurrentLocation()
   {
     configureLocationManager()
@@ -139,6 +144,7 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
     if let location = locations.last
     {
       apiController.searchDarkSky(coordinate: location.coordinate)
+      apiController.searchDarkSkyForDaily(coordinate: location.coordinate)
     }
   }
 }
