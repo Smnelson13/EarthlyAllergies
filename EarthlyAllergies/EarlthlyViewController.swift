@@ -166,3 +166,10 @@ extension EarthlyViewController: ZipcodeViewControllerDelegate
     }
   }
 }
+
+extension EarthlyViewController: UITableViewDelegate, UITableViewDataSource
+{
+  
+}
+
+

@@ -107,17 +107,52 @@
                                     <segue destination="xzZ-hK-pWM" kind="presentation" id="4eF-7S-MJI"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-TU-wNJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="49" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5dw-TU-wNJ">
                                 <rect key="frame" x="25" y="336" width="325" height="306"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yPF-4t-7s5">
-                                        <rect key="frame" x="0.0" y="28" width="325" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForcastCell" id="yPF-4t-7s5" customClass="ForcastCell" customModule="EarthlyAllergies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="325" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yPF-4t-7s5" id="ioe-Js-Eh1">
-                                            <rect key="frame" x="0.0" y="0.0" width="325" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="325" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sFd-L1-vdZ">
+                                                    <rect key="frame" x="269" y="0.0" width="50" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="sFd-L1-vdZ" secondAttribute="height" multiplier="50:49" id="gmS-zl-XUQ"/>
+                                                        <constraint firstAttribute="width" constant="50" id="j4c-P3-NyP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="summary label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDi-hX-uew">
+                                                    <rect key="frame" x="6" y="0.0" width="112" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-pT-dwg">
+                                                    <rect key="frame" x="6" y="27" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="YNJ-pT-dwg" secondAttribute="bottom" id="2SW-LJ-haS"/>
+                                                <constraint firstAttribute="trailing" secondItem="sFd-L1-vdZ" secondAttribute="trailing" constant="6" id="Pt0-e6-STQ"/>
+                                                <constraint firstItem="YNJ-pT-dwg" firstAttribute="leading" secondItem="ioe-Js-Eh1" secondAttribute="leading" constant="6" id="UVq-gG-FHt"/>
+                                                <constraint firstAttribute="bottom" secondItem="sFd-L1-vdZ" secondAttribute="bottom" id="g9c-uV-BqC"/>
+                                                <constraint firstItem="bDi-hX-uew" firstAttribute="leading" secondItem="ioe-Js-Eh1" secondAttribute="leading" constant="6" id="iaQ-g2-aDa"/>
+                                                <constraint firstItem="bDi-hX-uew" firstAttribute="top" secondItem="ioe-Js-Eh1" secondAttribute="top" id="mkl-5E-aof"/>
+                                                <constraint firstItem="sFd-L1-vdZ" firstAttribute="top" secondItem="ioe-Js-Eh1" secondAttribute="top" id="s8E-oH-IpJ"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dailyIcon" destination="sFd-L1-vdZ" id="HUq-tx-tXm"/>
+                                            <outlet property="dailySummaryLabel" destination="bDi-hX-uew" id="SOQ-hl-knX"/>
+                                            <outlet property="dailyTemperatureLabel" destination="YNJ-pT-dwg" id="ESr-gK-IUp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

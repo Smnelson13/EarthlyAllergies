@@ -19,6 +19,7 @@
 		9089B5751E95807B007398CA /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B5741E95807B007398CA /* APIController.swift */; };
 		9089B5791E9580B6007398CA /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B5781E9580B6007398CA /* Weather.swift */; };
 		9089B57F1E95B05C007398CA /* EarlthlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */; };
+		90E528761EFB63480024306B /* ForcastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E528751EFB63480024306B /* ForcastCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		9089B5781E9580B6007398CA /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarlthlyViewController.swift; sourceTree = "<group>"; };
 		90E528741EEE4CEF0024306B /* EarthlyAllergies-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EarthlyAllergies-Bridging-Header.h"; sourceTree = "<group>"; };
+		90E528751EFB63480024306B /* ForcastCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForcastCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				9089B5621E958058007398CA /* AppDelegate.swift */,
 				9057F0661EBB96C100B9D14F /* Keys.swift */,
 				9089B57E1E95B05C007398CA /* EarlthlyViewController.swift */,
+				90E528751EFB63480024306B /* ForcastCell.swift */,
 				9058BDED1E9A9015001815CE /* ZipcodeViewController.swift */,
 				9089B5741E95807B007398CA /* APIController.swift */,
 				90206C5A1E97D34000E2F0E7 /* SKYIconView.swift */,
@@ -169,6 +172,7 @@
 				9089B5631E958058007398CA /* AppDelegate.swift in Sources */,
 				9057F0671EBB96C100B9D14F /* Keys.swift in Sources */,
 				9089B5751E95807B007398CA /* APIController.swift in Sources */,
+				90E528761EFB63480024306B /* ForcastCell.swift in Sources */,
 				9089B5791E9580B6007398CA /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
