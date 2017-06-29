@@ -109,7 +109,12 @@ class EarthlyViewController: UIViewController, APIControllerProtocol, CLLocation
   
   func didRecieveDaily(_ dailyResults: [String : Any])
   {
-    //some code
+    let Forecast = WeatherForcast(dailyWeatherDicionary: dailyResults)
+    let dispatchQueue = DispatchQueue.main
+    dispatchQueue.async {
+  
+      
+    }
   }
   
   func loadCurrentLocation()
@@ -169,7 +174,26 @@ extension EarthlyViewController: ZipcodeViewControllerDelegate
 
 extension EarthlyViewController: UITableViewDelegate, UITableViewDataSource
 {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+  {
+    return 1
+  }
   
+  func numberOfSections(in tableView: UITableView) -> Int
+  {
+    return 1
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+  {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for: indexPath) as! ForcastCell
+    
+    
+    
+    return cell
+  }
 }
+
+
 
 

@@ -10,7 +10,7 @@ import UIKit
 
 class ForcastCell: UITableViewCell
 {
-  @IBOutlet weak var dailyIcon: UIImageView!
+  @IBOutlet weak var dailyIcon: SKYIconView!
   @IBOutlet weak var dailySummaryLabel: UILabel!
   @IBOutlet weak var dailyTemperatureLabel: UILabel!
 

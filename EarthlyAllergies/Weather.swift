@@ -29,4 +29,5 @@ class Weather
     windSpeed = weatherDictionary["windSpeed"] as! Double
     visibility = weatherDictionary["visibility"] as! Double
   }
+  
 }
